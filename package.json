@@ -1,0 +1,16 @@
+{
+  "name": "github-webhook-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tqma113/github-webhook-server.git",
+  "author": "Ma Tianqi <mtq1997@126.com>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "yarn permission&yarn start",
+    "permission": "chmod 755 ./bootsrap.sh&chmod 755 ./deploy.sh",
+    "start": "./bootstrap.sh"
+  },
+  "dependencies": {
+    "github-webhook-handler": "^1.0.0"
+  }
+}

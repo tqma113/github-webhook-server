@@ -24,14 +24,14 @@ handler.on("push", function (event) {
     "Received a push event for %s to %s from %s",
     event.payload.repository.name,
     event.payload.ref,
-    event.payload.repository.url
+    event.payload.repository.html_url
   );
 
   runCommand(
     "sh",
     [
       "./publish.sh",
-      event.payload.repository.url,
+      event.payload.repository.html_url,
       event.payload.repository.name,
     ],
     function (txt) {

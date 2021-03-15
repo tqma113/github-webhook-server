@@ -1,10 +1,8 @@
 #!/bin/bash
 
-repo=$1
-name=$2
-
-cd "/home"
-rm -rf $name
-git clone $repo $name
-cd $name
-./deploy.sh
+app_name="webhook"
+yarn install
+yarn build
+pm2 stop $app_name
+pm2 delete $app_name
+pm2 start "node ./index.js" --name $app_name

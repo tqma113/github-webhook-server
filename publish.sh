@@ -24,5 +24,5 @@ else
   fi
 fi
 
-chmod 755 ./deploy.sh
-./deploy.sh
+chmod 755 `/home/$name/deploy.sh`
+`/home/$name/deploy.sh`

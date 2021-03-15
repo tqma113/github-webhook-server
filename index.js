@@ -21,9 +21,10 @@ handler.on("error", function (err) {
 // 监听到push事件的时候执行我们的自动化脚本
 handler.on("push", function (event) {
   console.log(
-    "Received a push event for %s to %s",
+    "Received a push event for %s to %s from %s",
     event.payload.repository.name,
-    event.payload.ref
+    event.payload.ref,
+    event.payload.repository.url
   );
 
   runCommand(

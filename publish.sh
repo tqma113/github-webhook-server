@@ -6,22 +6,16 @@ name=$2
 echo "publish $name from $repo"
 cd /home
 
+rm -rf $name
 if [[ ! -d "/$name" ]]
 then
-  git clone $repo $name
-  cd $name
+  echo "New project $name and $repo"
 else
   cd $name
-  git_repo_remote=$(git remote -v)
-  if [[ $git_repo_remote == *$repo* ]]
-  then
-    git reset --hard origin/master
-    git clean -f
-    git pull
-    git checkout main
-  else
-    echo "two project with same name: $repo and $git_repo_remote"
-  fi
+  git reset --hard origin/main
+  git clean -f
+  git pull
+  git checkout main
 fi
 
 chmod 755 `/home/$name/deploy.sh`

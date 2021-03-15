@@ -6,9 +6,9 @@
   "author": "Ma Tianqi <mtq1997@126.com>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "yarn permission&yarn start",
     "permission": "chmod 755 ./publish.sh&chmod 755 ./deploy.sh",
-    "start": "./deploy.sh"
+    "start": "yarn permission&yarn deploy",
+    "deploy": "./deploy.sh"
   },
   "dependencies": {
     "github-webhook-handler": "^1.0.0"

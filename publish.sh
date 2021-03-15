@@ -20,9 +20,7 @@ else
     git pull
     git checkout main
   else
-    cd ..
-    rm -rf $name
-    cd $name
+    echo "two project with same name: $repo and $git_repo_remote"
   fi
 fi
 

@@ -29,7 +29,7 @@ handler.on("push", function (event) {
   runCommand(
     "sh",
     [
-      "./deploy.sh",
+      "./publish.sh",
       event.payload.repository.url,
       event.payload.repository.name,
     ],

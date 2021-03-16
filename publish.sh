@@ -18,5 +18,5 @@ else
   git checkout main
 fi
 
-chmod 755 `/home/$name/deploy.sh`
-`/home/$name/deploy.sh`
+chmod 755 /home/$name/deploy.sh
+/home/$name/deploy.sh
